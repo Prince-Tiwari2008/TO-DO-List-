@@ -208,3 +208,172 @@ body {
     background: linear-gradient(145deg, rgba(25, 39, 67, 0.98), rgba(13, 23, 43, 0.98));
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55), 0 0 30px rgba(59, 130, 246, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.08);
 }
+
+
+/* Responsive Design */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(660px, 100%);
+    height: auto;
+    min-height: 500px;
+    padding: 15px;
+}
+
+.inputPart {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.inputPart input {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+}
+
+.inputPart button {
+    flex-shrink: 0;
+    margin-left: 0;
+}
+
+.status {
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.status button {
+    margin-left: 0;
+}
+
+.status .all {
+    margin-left: 5px;
+}
+
+.task-list {
+    width: 100%;
+    height: 180px;
+}
+
+.tasks {
+    width: 100%;
+    height: auto;
+    min-height: 38px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    padding-right: 40px;
+    position: relative;
+    overflow-wrap: anywhere;
+}
+
+.tasks img {
+    position: absolute;
+    right: 8px;
+    top: 3px;
+    height: 27px;
+    width: 27px;
+    margin: 0;
+}
+
+.tasks label {
+    display: inline-block;
+    max-width: calc(100% - 25px);
+}
+
+.last {
+    margin: 0;
+}
+
+h3 {
+    justify-content: center;
+    margin: 25px 0 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px 10px;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 0;
+        padding: 12px;
+        border-radius: 15px;
+    }
+
+    .logo img {
+        height: 32px;
+        margin: 5px 0;
+    }
+
+    .Todo {
+        font-size: 27px;
+        margin: 5px 0;
+    }
+
+    .Plan {
+        font-size: 25px;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .Get {
+        margin-left: 0;
+        font-size: 21px;
+    }
+
+    .inputPart input {
+        font-size: 14px;
+    }
+
+    .status {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .status button {
+        font-size: 13px;
+    }
+
+    .status .all {
+        margin-left: 0;
+    }
+
+    .task-list {
+        height: 200px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .keep {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 360px) {
+    .status {
+        gap: 5px;
+    }
+
+    .status .all {
+        width: 55px;
+    }
+
+    .status .pending {
+        width: 75px;
+    }
+
+    .status .completed {
+        width: 90px;
+    }
+
+    .Plan {
+        font-size: 22px;
+    }
+}

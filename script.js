@@ -35,15 +35,7 @@ const allBtn = document.querySelector(".all");
 const pendingBtn = document.querySelector(".pending");
 const completedBtn = document.querySelector(".completed");
 
-const initialTasks = [...taskList.querySelectorAll(".tasks")].map(
-    (element, index) => ({
-        id: index + 1,
-        text: element.querySelector("label").textContent.trim(),
-        completed: element.querySelector('input[type="checkbox"]').checked
-    })
-);
-
-let tasks = initialTasks;
+let tasks = [];
 
 try {
     const savedTasks = localStorage.getItem("todoTasks");
